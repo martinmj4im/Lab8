@@ -50,17 +50,25 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void addCity(City city){
-
         cities.add(city);
-
     }
 
     public void deleteCity (City city){
-
+        if (cities.contains(city)) {
+            cities.remove(city);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
     }
 
     public Boolean hasCity (City city){
-        return false;
+        if (cities.contains(city)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }
