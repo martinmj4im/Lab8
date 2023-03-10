@@ -55,4 +55,12 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    public void deleteCity (City city){
+
+    }
+
+    public Boolean hasCity (City city){
+        return false;
+    }
+
 }
